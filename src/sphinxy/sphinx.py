@@ -35,6 +35,13 @@ class Sphinx:
         return (self._riddle.question, hint)
 
     def check_riddle_answer(self, answer: str, return_hint: bool = False) -> str:
+        """
+        Check answer to riddle.
+
+        :param answer: Riddle answer to be checked.
+        :param return_hint: When True, return hint (answer's first letter) when answer is incorrect; else raise IncorrectAnswer
+        :return: str indicating results of check, or hint
+        """
         if self._riddle.check_answer(answer):
             return "Your answer was correct. You may pass."
         elif return_hint:
