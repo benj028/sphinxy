@@ -16,7 +16,7 @@ The Egyptian Sphinx
 -------------------
 .. image:: _static/sphinx.png
 
-Indices and tables
+Indices and Tables
 ==================
 
 * :ref:`genindex`
