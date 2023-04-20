@@ -1,3 +1,5 @@
+from typing import Union
+
 from sphinxy.riddle import Riddle
 
 
@@ -26,7 +28,8 @@ class Sphinx:
         self._riddle = riddle
         return "I have updated my riddle. Are you ready to solve it?"
 
-    def pose_riddle(self, include_hint: bool = False) -> tuple[str, str | None]:
+    # def pose_riddle(self, include_hint: bool = False) -> tuple[str, str | None]:  (Original, not supported in v3.9)
+    def pose_riddle(self, include_hint: bool = False) -> tuple[str, Union[str, None]]:
         hint = (
             f"Hint: The answer starts with the letter '{self._riddle.get_hint()}'."
             if include_hint
