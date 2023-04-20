@@ -38,9 +38,12 @@ class Sphinx:
         """
         Check answer to riddle.
 
-        :param answer: Riddle answer to be checked.
-        :param return_hint: When True, return hint (answer's first letter) when answer is incorrect; else raise IncorrectAnswer
-        :return: str indicating results of check, or hint
+        Args:
+            answer: User-supplied answer to check
+            return_hint: Whether to provide hint (first letter of answer), or raise IncorrectAnswer exception
+
+        Returns: str indicating results
+
         """
         if self._riddle.check_answer(answer):
             return "Your answer was correct. You may pass."
